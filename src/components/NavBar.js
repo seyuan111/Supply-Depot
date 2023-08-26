@@ -7,7 +7,7 @@ import Link from 'next/link'
 const NavBar = () => {
     const [nav, setNav] = useState(false)
   return (
-    <div className="w-full h-[70px] bg-gradient-to-r from-cyan-600 to-blue-500">
+    <div className="w-full h-[70px] bg-gradient-to-r from-cyan-600 to-blue-500 fixed z-10">
 
         <div className="max-w-[1240px] mx-auto flex justify-between items-center p-4">
 
@@ -32,11 +32,13 @@ const NavBar = () => {
                 <h2 className="text-2xl p-4">Supply-Depot</h2>
                 <nav>
                     <ul className="flex flex-col p-4 text-gray-800">
+                        <li className="text-xl flex my-4"><Link href="/">Home</Link></li>
                         <li className="text-xl flex my-4"><Link href="/About">About</Link></li>
                         <li className="text-xl flex my-4"><Link href="/Shop">Shop</Link></li>
                         <li className="text-xl flex my-4"><Link href="/Deals">Deals</Link></li>
                         <li className="text-xl flex my-4"><Link href="/Contact">Contact</Link></li>
                         <li className="text-xl flex my-4"><Link href="Login">Login</Link></li>
+                        <li className="text-xl flex my-4"><Link href="/Checkout">Cart</Link></li>
                     </ul>
                 </nav>
             </div>
